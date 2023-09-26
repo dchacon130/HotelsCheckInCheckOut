@@ -1,21 +1,37 @@
 from django.db import models
 
-# Create your models here.
-class Reservation(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100) 
-    phone = models.CharField(max_length=100) 
-    email = models.EmailField(max_length=200)
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=100)
-    zip_code = models.CharField(max_length=100)
-    details = models.CharField(max_length=100)
-    add_guests = models.IntegerField()
-    checkin = models.DateField(max_length=100)
-    checkout = models.DateField(max_length=100)
-    room_type = models.CharField(max_length=100)
-    total = models.CharField(max_length=100)
+class Room(models.Model):
+    name = models.CharField(max_length=50)
+    precio = models.DecimalField(max_digits=10, decimal_places=2)
 
-    def __str__(self):
-        return self.first_name +' '+ self.last_name
-    
+class Address(models.Model):
+    street = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    zip_code = models.CharField(max_length=10, blank=True)
+    details = models.CharField(max_length=200, blank=True)
+
+class AddGuest(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=20, blank=True)
+    email = models.EmailField()
+    birthday = models.DateField(blank=True, null=True)
+
+class CheckInOut(models.Model):
+    check_in_date = models.DateTimeField()
+    check_out_date = models.DateTimeField()
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+    taxes = models.DecimalField(max_digits=5, decimal_places=2)
+
+class Reservation(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=20, null=True)
+    email = models.EmailField()
+    birthday = models.DateField(blank=True, null=True)
+    address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True,blank=True)
+    add_guest = models.ForeignKey(AddGuest, on_delete=models.CASCADE, null=True, blank=True)
+    check_in_out = models.ForeignKey(CheckInOut, on_delete=models.CASCADE, null=True,blank=True)
+
+

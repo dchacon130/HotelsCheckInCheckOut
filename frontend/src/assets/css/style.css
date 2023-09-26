@@ -1,0 +1,11 @@
+.pagina-con-fondo {
+    /* Establece la imagen de fondo y el estilo */
+    background-image: url('background-hotel.jpg');
+    /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Para que la imagen de fondo se mantenga fija */
+    height: 800px;
+    /* Alto deseado */
+}

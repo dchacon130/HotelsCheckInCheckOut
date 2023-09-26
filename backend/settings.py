@@ -84,6 +84,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'hotels',  # Nombre de tu base de datos en MongoDB
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://dchacon130:Nr5j4tzK7qI1Turl@cluster0.7g6rsbm.mongodb.net/',  # URL de tu servidor MongoDB
+        }
+    }
+}"""
+
 
 
 # Password validation

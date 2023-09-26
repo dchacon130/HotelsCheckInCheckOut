@@ -3,11 +3,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa el JavaScript de 
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { ReservationPage } from "../pages/ReservationPage"
-import { ReservationFormPage } from "../pages/ReservationFormPage"
-import { Navigation } from "../components/NavigationComponent"
-import { Toaster } from "react-hot-toast"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ReservationPage } from "../pages/ReservationPage";
+import { ReservationFormPage } from "../pages/ReservationFormPage";
+import { Navigation } from "../components/NavigationComponent";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route path="/reservation-form/:id" element={<ReservationFormPage />} />
         <Route path="/" element={<ReservationPage />} />
       </Routes>
+
       <Toaster />
     </BrowserRouter>
   )
