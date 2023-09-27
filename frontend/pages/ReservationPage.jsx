@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllReservatios } from "../api/tasks.api";
 import { useNavigate } from "react-router-dom";
+import '../src/assets/css/style.css';
 
 export function ReservationPage() {
     //return <ReservationListComponent/>;

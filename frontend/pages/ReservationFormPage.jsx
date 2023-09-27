@@ -50,96 +50,112 @@ export function ReservationFormPage() {
 
     return (
         <div className="container">
-            <h1 className="text-center mt-5 mb-5">Create a Reservation</h1>
+            <h1 className="text-center mt-2 mb-2">Create a Reservation</h1>
             <form onSubmit={onSubmit}>
                 <div className="row">
-                    <div className="col-9">
+                    <div className="col-8">
                         <div className="row">
                             <div className="col-4">
-                                <p><input
-                                    type="text"
-                                    placeholder="First Name"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("first_name", { required: true })}
-                                />{errors.first_name && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="text"
-                                    placeholder="Last Name"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("last_name", { required: true })}
-                                />{errors.last_name && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="numer"
-                                    placeholder="Phone Number"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("phone", { required: true })}
-                                />{errors.phone && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="email"
-                                    placeholder="Email"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("email", { required: true })}
-                                />{errors.email && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
+                                <p>First Name
+                                    <input
+                                        type="text"
+                                        placeholder="First Name"
+                                        className="form-label form-control mb-3"
+                                        {...register("first_name", { required: true })}
+                                    />{errors.first_name && <span className="alert alert-danger alert-xs" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Last Name
+                                    <input
+                                        type="text"
+                                        placeholder="Last Name"
+                                        className="form-label form-control mb-3"
+                                        {...register("last_name", { required: true })}
+                                    />{errors.last_name && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Phone Number
+                                    <input
+                                        type="numer"
+                                        placeholder="Phone Number"
+                                        className="form-label form-control mb-3"
+                                        {...register("phone", { required: true })}
+                                    />{errors.phone && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Email
+                                    <input
+                                        type="email"
+                                        placeholder="Email"
+                                        className="form-label form-control mb-3"
+                                        {...register("email", { required: true })}
+                                    />{errors.email && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
                             </div>
                             <div className="col-4">
-                                <p><input
-                                    type="text"
-                                    placeholder="Address"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("address", { required: true })}
-                                />{errors.address && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="text"
-                                    placeholder="City"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("city", { required: true })}
-                                />{errors.city && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="text"
-                                    placeholder="Zip Code"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("zip_code", { required: true })}
-                                />{errors.zip_code && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                                <p><input
-                                    type="text"
-                                    placeholder="Details"
-                                    className="form-label form-control-lg me-3"
-                                    {...register("details", { required: true })}
-                                />{errors.details && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
+                                <p>Address
+                                    <input
+                                        type="text"
+                                        placeholder="Address"
+                                        className="form-label form-control mb-3"
+                                        {...register("address", { required: true })}
+                                    />{errors.address && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>City
+                                    <input
+                                        type="text"
+                                        placeholder="City"
+                                        className="form-label form-control mb-3"
+                                        {...register("city", { required: true })}
+                                    />{errors.city && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Zip Code
+                                    <input
+                                        type="text"
+                                        placeholder="Zip Code"
+                                        className="form-label form-control mb-3"
+                                        {...register("zip_code", { required: true })}
+                                    />{errors.zip_code && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Details
+                                    <input
+                                        type="text"
+                                        placeholder="Details"
+                                        className="form-label form-control mb-3"
+                                        {...register("details", { required: true })}
+                                    />{errors.details && <span className="alert alert-danger" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                                <p>Add guests
+                                    <input
+                                        type="text"
+                                        placeholder="Add guests"
+                                        className="form-label form-control mb-3"
+                                        {...register("add_guests", { required: true })}
+                                    />{errors.add_guests && <span className="alert alert-danger form-control" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
-                        <p><input
-                            type="text"
-                            placeholder="Add guests"
-                            className="form-label form-control-lg me-3"
-                            {...register("add_guests", { required: true })}
-                        />{errors.add_guests && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                        <p><input
-                            type="date"
-                            placeholder="Check In YYYY-MM-DD"
-                            className="form-label form-control-lg me-3"
-                            {...register("checkin", { required: true })}
-                        />{errors.checkin && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                        <p><input
-                            type="date"
-                            placeholder="Check Out YYYY-MM-DD"
-                            className="form-label form-control-lg me-3"
-                            {...register("checkout", { required: true })}
-                        />{errors.checkout && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                        <p><input
-                            type="text"
-                            placeholder="Room type"
-                            className="form-label form-control-lg me-3"
-                            {...register("room_type", { required: true })}
-                        />{errors.room_type && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
-                        <p><input
-                            type="text"
-                            placeholder="Total"
-                            className="form-label form-control-lg me-3"
-                            {...register("total", { required: true })}
-                        />{errors.total && <span className="alert alert-warning" role="alert">This field is required</span>}</p>
+                    <div className="col-4 text-start">
+                        <p>Check In YYYY-MM-DD<br />
+                            <input
+                                type="date"
+                                placeholder="Check In YYYY-MM-DD"
+                                className="form-label form-control mb-3"
+                                {...register("checkin", { required: true })}
+                            />{errors.checkin && <span className="alert alert-danger form-control" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                        <p>Check Out YYYY-MM-DD<br />
+                            <input
+                                type="date"
+                                placeholder="Check Out YYYY-MM-DD"
+                                className="form-label form-control mb-3"
+                                {...register("checkout", { required: true })}
+                            />{errors.checkout && <span className="alert alert-danger form-control" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+
+                        <p>Room type<br />
+                            <input
+                                type="text"
+                                placeholder="Room type"
+                                className="form-label form-control mb-3"
+                                {...register("room_type", { required: true })}
+                            /><br />{errors.room_type && <span className="alert alert-danger form-control" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}</p>
+                        <p>Total<br />
+                            <div className="input-group mb-3">
+                                <span className="input-group-text">$</span>
+                                <input type="text"
+                                    className="form-control" aria-label="Dollar amount (with dot and two decimal places)"
+                                    {...register("total", { required: true })} /><br />
+                                {errors.total && <span className="alert alert-danger form-control" role="alert"><i className="fa-solid fa-triangle-exclamation"></i> This field is required</span>}
+                            </div>
+                        </p>
                     </div>
                 </div>
                 <div className="row">
@@ -159,7 +175,7 @@ export function ReservationFormPage() {
                         }
                     </div>
                 </div>
-            </form>
+            </form >
         </div >
 
     )

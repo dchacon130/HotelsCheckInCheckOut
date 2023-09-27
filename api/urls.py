@@ -5,6 +5,10 @@ from api import views
 
 router = routers.DefaultRouter()
 router.register(r'reservation', views.ReservationView, 'reservation')
+router.register(r'room', views.RoomView, 'room')
+router.register(r'address', views.AddressView, 'address')
+router.register(r'addguest', views.AddGuestView, 'addguest')
+router.register(r'checkinout', views.CheckInOutView, 'checkinout')
 
 urlpatterns = [
     path('', include(router.urls)),
